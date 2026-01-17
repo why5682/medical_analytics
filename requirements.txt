@@ -1,0 +1,7 @@
+streamlit
+feedparser
+requests
+beautifulsoup4
+ollama
+cloudscraper>=1.2.71
+markdown
