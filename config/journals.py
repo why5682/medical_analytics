@@ -1,40 +1,36 @@
 """
 Journal Configuration
 Defines available medical journals and their RSS feeds.
-Categorized by MEDICAL SPECIALTY.
+Categorized by MEDICAL SPECIALTY (Consolidated).
 """
 
 JOURNALS = [
     # ========================================
-    # Pharmacoepidemiology & Drug Safety
+    # 약물학 (Pharmacology & Drug Safety)
     # ========================================
     {
         "name": "Pharmacoepidemiology and Drug Safety",
         "url": "https://onlinelibrary.wiley.com/feed/10991557/most-recent",
-        "category": "Pharmacoepidemiology"
+        "category": "Pharmacology"
     },
     {
         "name": "Drug Safety",
         "url": "https://link.springer.com/search.rss?facet-content-type=Article&facet-journal-id=40264&channel-name=Drug%20Safety",
-        "category": "Pharmacoepidemiology"
+        "category": "Pharmacology"
     },
-    
-    # ========================================
-    # Clinical Pharmacology
-    # ========================================
     {
         "name": "Clinical Pharmacology & Therapeutics",
         "url": "https://onlinelibrary.wiley.com/feed/15326535/most-recent",
-        "category": "Clinical Pharmacology"
+        "category": "Pharmacology"
     },
     {
         "name": "British Journal of Clinical Pharmacology",
         "url": "https://onlinelibrary.wiley.com/feed/13652125/most-recent",
-        "category": "Clinical Pharmacology"
+        "category": "Pharmacology"
     },
     
     # ========================================
-    # General Medicine (Top Tier)
+    # 일반의학 (General Medicine)
     # ========================================
     {
         "name": "NEJM",
@@ -71,9 +67,14 @@ JOURNALS = [
         "url": "https://bmjopen.bmj.com/rss/recent.xml",
         "category": "General Medicine"
     },
+    {
+        "name": "BMJ Quality & Safety",
+        "url": "https://qualitysafety.bmj.com/rss/recent.xml",
+        "category": "General Medicine"
+    },
 
     # ========================================
-    # Oncology (종양학)
+    # 종양학 (Oncology)
     # ========================================
     {
         "name": "The Lancet Oncology",
@@ -87,173 +88,122 @@ JOURNALS = [
     },
 
     # ========================================
-    # Cardiology (심장내과)
+    # 내과 (Internal Medicine)
+    # 심장, 소화기, 호흡기, 내분비, 감염, 류마티스
     # ========================================
     {
         "name": "JAMA Cardiology",
         "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamacardiology&hl=en-US&gl=US&ceid=US:en",
-        "category": "Cardiology"
+        "category": "Internal Medicine"
     },
     {
         "name": "Heart",
         "url": "https://heart.bmj.com/rss/recent.xml",
-        "category": "Cardiology"
+        "category": "Internal Medicine"
     },
-
-    # ========================================
-    # Neurology (신경과)
-    # ========================================
-    {
-        "name": "The Lancet Neurology",
-        "url": "https://www.thelancet.com/rssfeed/laneur_current.xml",
-        "category": "Neurology"
-    },
-    {
-        "name": "JAMA Neurology",
-        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamaneurology&hl=en-US&gl=US&ceid=US:en",
-        "category": "Neurology"
-    },
-    {
-        "name": "JNNP",
-        "url": "https://jnnp.bmj.com/rss/recent.xml",
-        "category": "Neurology"
-    },
-
-    # ========================================
-    # Psychiatry (정신건강의학과)
-    # ========================================
-    {
-        "name": "The Lancet Psychiatry",
-        "url": "https://www.thelancet.com/rssfeed/lanpsy_current.xml",
-        "category": "Psychiatry"
-    },
-    {
-        "name": "JAMA Psychiatry",
-        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamapsychiatry&hl=en-US&gl=US&ceid=US:en",
-        "category": "Psychiatry"
-    },
-
-    # ========================================
-    # Diabetes/Endocrinology (내분비내과)
-    # ========================================
     {
         "name": "The Lancet Diabetes & Endocrinology",
         "url": "https://www.thelancet.com/rssfeed/landia_current.xml",
-        "category": "Diabetes/Endocrinology"
+        "category": "Internal Medicine"
     },
-
-    # ========================================
-    # Gastroenterology (소화기내과)
-    # ========================================
     {
         "name": "The Lancet Gastroenterology & Hepatology",
         "url": "https://www.thelancet.com/rssfeed/langas_current.xml",
-        "category": "Gastroenterology"
+        "category": "Internal Medicine"
     },
     {
         "name": "Gut",
         "url": "https://gut.bmj.com/rss/recent.xml",
-        "category": "Gastroenterology"
+        "category": "Internal Medicine"
     },
-
-    # ========================================
-    # Respiratory (호흡기내과)
-    # ========================================
     {
         "name": "The Lancet Respiratory Medicine",
         "url": "https://www.thelancet.com/rssfeed/lanres_current.xml",
-        "category": "Respiratory"
+        "category": "Internal Medicine"
     },
     {
         "name": "Thorax",
         "url": "https://thorax.bmj.com/rss/recent.xml",
-        "category": "Respiratory"
+        "category": "Internal Medicine"
     },
-
-    # ========================================
-    # Infectious Disease (감염내과)
-    # ========================================
     {
         "name": "The Lancet Infectious Diseases",
         "url": "https://www.thelancet.com/rssfeed/laninf_current.xml",
-        "category": "Infectious Disease"
+        "category": "Internal Medicine"
+    },
+    {
+        "name": "Annals of the Rheumatic Diseases",
+        "url": "https://ard.bmj.com/rss/recent.xml",
+        "category": "Internal Medicine"
     },
 
     # ========================================
-    # Public Health (공중보건)
+    # 신경/정신과 (Neuroscience & Psychiatry)
     # ========================================
     {
-        "name": "The Lancet Global Health",
-        "url": "https://www.thelancet.com/rssfeed/langlo_current.xml",
-        "category": "Public Health"
+        "name": "The Lancet Neurology",
+        "url": "https://www.thelancet.com/rssfeed/laneur_current.xml",
+        "category": "Neuroscience"
     },
     {
-        "name": "The Lancet Public Health",
-        "url": "https://www.thelancet.com/rssfeed/lanpub_current.xml",
-        "category": "Public Health"
+        "name": "JAMA Neurology",
+        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamaneurology&hl=en-US&gl=US&ceid=US:en",
+        "category": "Neuroscience"
+    },
+    {
+        "name": "JNNP",
+        "url": "https://jnnp.bmj.com/rss/recent.xml",
+        "category": "Neuroscience"
+    },
+    {
+        "name": "The Lancet Psychiatry",
+        "url": "https://www.thelancet.com/rssfeed/lanpsy_current.xml",
+        "category": "Neuroscience"
+    },
+    {
+        "name": "JAMA Psychiatry",
+        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamapsychiatry&hl=en-US&gl=US&ceid=US:en",
+        "category": "Neuroscience"
     },
 
     # ========================================
-    # Pediatrics (소아청소년과)
-    # ========================================
-    {
-        "name": "JAMA Pediatrics",
-        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamapediatrics&hl=en-US&gl=US&ceid=US:en",
-        "category": "Pediatrics"
-    },
-
-    # ========================================
-    # Surgery (외과)
+    # 외과 및 특수분야 (Surgical & Subspecialties)
+    # 외과, 안과, 피부과, 소아과, 스포츠의학, 공중보건
     # ========================================
     {
         "name": "JAMA Surgery",
         "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamasurgery&hl=en-US&gl=US&ceid=US:en",
-        "category": "Surgery"
+        "category": "Surgical & Subspecialties"
     },
-
-    # ========================================
-    # Dermatology (피부과)
-    # ========================================
-    {
-        "name": "JAMA Dermatology",
-        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamadermatology&hl=en-US&gl=US&ceid=US:en",
-        "category": "Dermatology"
-    },
-
-    # ========================================
-    # Ophthalmology (안과)
-    # ========================================
     {
         "name": "JAMA Ophthalmology",
         "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamaophthalmology&hl=en-US&gl=US&ceid=US:en",
-        "category": "Ophthalmology"
+        "category": "Surgical & Subspecialties"
     },
-
-    # ========================================
-    # Rheumatology (류마티스내과)
-    # ========================================
     {
-        "name": "Annals of the Rheumatic Diseases",
-        "url": "https://ard.bmj.com/rss/recent.xml",
-        "category": "Rheumatology"
+        "name": "JAMA Dermatology",
+        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamadermatology&hl=en-US&gl=US&ceid=US:en",
+        "category": "Surgical & Subspecialties"
     },
-
-    # ========================================
-    # Sports Medicine (스포츠의학)
-    # ========================================
+    {
+        "name": "JAMA Pediatrics",
+        "url": "https://news.google.com/rss/search?q=site:jamanetwork.com/journals/jamapediatrics&hl=en-US&gl=US&ceid=US:en",
+        "category": "Surgical & Subspecialties"
+    },
     {
         "name": "British Journal of Sports Medicine",
         "url": "https://bjsm.bmj.com/rss/recent.xml",
-        "category": "Sports Medicine"
+        "category": "Surgical & Subspecialties"
     },
-
-    # ========================================
-    # Healthcare Quality (의료 질 관리)
-    # ========================================
     {
-        "name": "BMJ Quality & Safety",
-        "url": "https://qualitysafety.bmj.com/rss/recent.xml",
-        "category": "Healthcare Quality"
+        "name": "The Lancet Global Health",
+        "url": "https://www.thelancet.com/rssfeed/langlo_current.xml",
+        "category": "Surgical & Subspecialties"
+    },
+    {
+        "name": "The Lancet Public Health",
+        "url": "https://www.thelancet.com/rssfeed/lanpub_current.xml",
+        "category": "Surgical & Subspecialties"
     },
 ]
 
