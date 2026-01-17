@@ -8,16 +8,10 @@ import os
 import sys
 import markdown
 
-# Add parent directory to path to allow importing common_lib
-# Adjust path to point to 'sandbox' directory
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-if parent_dir not in sys.path:
-    sys.path.append(parent_dir)
-
-from common_lib.core.collector import PaperCollector
-from common_lib.core.trend_analyzer import TrendAnalyzer
-from common_lib.config.journals import get_journals_by_category
+# Local imports
+from core.collector import PaperCollector
+from core.trend_analyzer import TrendAnalyzer
+from config.journals import get_journals_by_category
 
 # ==========================================
 # Helper Functions
