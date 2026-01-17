@@ -57,6 +57,14 @@ def main():
         default_model = get_secret("OLLAMA_MODEL", "gpt-oss:120b")
         model_name = st.text_input("Ollama Model", value=default_model)
         
+        # Language Selection
+        language = st.radio(
+            "응답 언어 / Response Language",
+            options=["en", "ko"],
+            format_func=lambda x: "🇺🇸 English" if x == "en" else "🇰🇷 한국어",
+            horizontal=True
+        )
+        
         # Time Period
         months_back = st.selectbox(
             "Time Period",
@@ -162,7 +170,7 @@ def main():
                             try:
                                 # Instantiate analyzer (API key handled internally by common_lib)
                                 analyzer = TrendAnalyzer(model_name=model_name)
-                                trend_text = analyzer.analyze_trends(all_papers)
+                                trend_text = analyzer.analyze_trends(all_papers, language=language)
                                 st.session_state[result_key] = trend_text
                             except Exception as e:
                                 st.error(f"Analysis failed: {str(e)}")
